@@ -63,9 +63,39 @@ namespace PhoneBook.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deleteImg {
+            get {
+                object obj = ResourceManager.GetObject("deleteImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PenIconB {
             get {
                 object obj = ResourceManager.GetObject("PenIconB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PhoneBookIconBig {
+            get {
+                object obj = ResourceManager.GetObject("PhoneBookIconBig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plusImg {
+            get {
+                object obj = ResourceManager.GetObject("plusImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

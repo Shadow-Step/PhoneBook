@@ -52,8 +52,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddCountryButton = new System.Windows.Forms.Button();
-            this.DeleteCountryButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -61,18 +59,20 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.EditToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddOperatorButton = new System.Windows.Forms.Button();
-            this.DeleteOperatorButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.infoView = new System.Windows.Forms.ListView();
             this.columnPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddPersonButton = new System.Windows.Forms.Button();
             this.DeletePersonButton = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.AddOperatorButton = new System.Windows.Forms.Button();
+            this.DeleteOperatorButton = new System.Windows.Forms.Button();
+            this.AddCountryButton = new System.Windows.Forms.Button();
+            this.DeleteCountryButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -265,26 +265,6 @@
             this.DeleteToolStripMenuItem.Text = "Удалить выделенное";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
-            // AddCountryButton
-            // 
-            this.AddCountryButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
-            this.AddCountryButton.Location = new System.Drawing.Point(7, 267);
-            this.AddCountryButton.Name = "AddCountryButton";
-            this.AddCountryButton.Size = new System.Drawing.Size(44, 23);
-            this.AddCountryButton.TabIndex = 3;
-            this.AddCountryButton.UseVisualStyleBackColor = true;
-            this.AddCountryButton.Click += new System.EventHandler(this.AddCountryClick);
-            // 
-            // DeleteCountryButton
-            // 
-            this.DeleteCountryButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
-            this.DeleteCountryButton.Location = new System.Drawing.Point(83, 267);
-            this.DeleteCountryButton.Name = "DeleteCountryButton";
-            this.DeleteCountryButton.Size = new System.Drawing.Size(44, 23);
-            this.DeleteCountryButton.TabIndex = 4;
-            this.DeleteCountryButton.UseVisualStyleBackColor = true;
-            this.DeleteCountryButton.Click += new System.EventHandler(this.DeleteCountryButton_click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBox2);
@@ -343,26 +323,6 @@
             this.DeleteToolStripMenuItem1.Text = "Удалить выделенное";
             this.DeleteToolStripMenuItem1.Click += new System.EventHandler(this.ContextDelOperator_click);
             // 
-            // AddOperatorButton
-            // 
-            this.AddOperatorButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
-            this.AddOperatorButton.Location = new System.Drawing.Point(6, 267);
-            this.AddOperatorButton.Name = "AddOperatorButton";
-            this.AddOperatorButton.Size = new System.Drawing.Size(44, 23);
-            this.AddOperatorButton.TabIndex = 5;
-            this.AddOperatorButton.UseVisualStyleBackColor = true;
-            this.AddOperatorButton.Click += new System.EventHandler(this.AddOperatorButton_click);
-            // 
-            // DeleteOperatorButton
-            // 
-            this.DeleteOperatorButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
-            this.DeleteOperatorButton.Location = new System.Drawing.Point(83, 267);
-            this.DeleteOperatorButton.Name = "DeleteOperatorButton";
-            this.DeleteOperatorButton.Size = new System.Drawing.Size(44, 23);
-            this.DeleteOperatorButton.TabIndex = 6;
-            this.DeleteOperatorButton.UseVisualStyleBackColor = true;
-            this.DeleteOperatorButton.Click += new System.EventHandler(this.DeleteOperatorButton_click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.infoView);
@@ -409,6 +369,18 @@
             this.columnAddress.Text = "Адрес";
             this.columnAddress.Width = 118;
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "*.dat";
+            this.saveFileDialog1.Filter = "Все файлы|*.dat";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "*.dat";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Все файлы|*dat";
+            this.openFileDialog1.InitialDirectory = "\\Debug";
+            // 
             // EditButton
             // 
             this.EditButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
@@ -421,7 +393,7 @@
             // 
             // AddPersonButton
             // 
-            this.AddPersonButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
+            this.AddPersonButton.Image = global::PhoneBook.Properties.Resources.plusImg;
             this.AddPersonButton.Location = new System.Drawing.Point(6, 267);
             this.AddPersonButton.Name = "AddPersonButton";
             this.AddPersonButton.Size = new System.Drawing.Size(44, 23);
@@ -431,7 +403,7 @@
             // 
             // DeletePersonButton
             // 
-            this.DeletePersonButton.Image = global::PhoneBook.Properties.Resources.PenIconB;
+            this.DeletePersonButton.Image = global::PhoneBook.Properties.Resources.deleteImg;
             this.DeletePersonButton.Location = new System.Drawing.Point(302, 267);
             this.DeletePersonButton.Name = "DeletePersonButton";
             this.DeletePersonButton.Size = new System.Drawing.Size(44, 23);
@@ -439,17 +411,45 @@
             this.DeletePersonButton.UseVisualStyleBackColor = true;
             this.DeletePersonButton.Click += new System.EventHandler(this.DeletePersonButton_click);
             // 
-            // saveFileDialog1
+            // AddOperatorButton
             // 
-            this.saveFileDialog1.DefaultExt = "*.dat";
-            this.saveFileDialog1.Filter = "Все файлы|*.dat";
+            this.AddOperatorButton.Image = global::PhoneBook.Properties.Resources.plusImg;
+            this.AddOperatorButton.Location = new System.Drawing.Point(6, 267);
+            this.AddOperatorButton.Name = "AddOperatorButton";
+            this.AddOperatorButton.Size = new System.Drawing.Size(44, 23);
+            this.AddOperatorButton.TabIndex = 5;
+            this.AddOperatorButton.UseVisualStyleBackColor = true;
+            this.AddOperatorButton.Click += new System.EventHandler(this.AddOperatorButton_click);
             // 
-            // openFileDialog1
+            // DeleteOperatorButton
             // 
-            this.openFileDialog1.DefaultExt = "*.dat";
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Все файлы|*dat";
-            this.openFileDialog1.InitialDirectory = "\\Debug";
+            this.DeleteOperatorButton.Image = global::PhoneBook.Properties.Resources.deleteImg;
+            this.DeleteOperatorButton.Location = new System.Drawing.Point(83, 267);
+            this.DeleteOperatorButton.Name = "DeleteOperatorButton";
+            this.DeleteOperatorButton.Size = new System.Drawing.Size(44, 23);
+            this.DeleteOperatorButton.TabIndex = 6;
+            this.DeleteOperatorButton.UseVisualStyleBackColor = true;
+            this.DeleteOperatorButton.Click += new System.EventHandler(this.DeleteOperatorButton_click);
+            // 
+            // AddCountryButton
+            // 
+            this.AddCountryButton.Image = global::PhoneBook.Properties.Resources.plusImg;
+            this.AddCountryButton.Location = new System.Drawing.Point(7, 267);
+            this.AddCountryButton.Name = "AddCountryButton";
+            this.AddCountryButton.Size = new System.Drawing.Size(44, 23);
+            this.AddCountryButton.TabIndex = 3;
+            this.AddCountryButton.UseVisualStyleBackColor = true;
+            this.AddCountryButton.Click += new System.EventHandler(this.AddCountryClick);
+            // 
+            // DeleteCountryButton
+            // 
+            this.DeleteCountryButton.Image = global::PhoneBook.Properties.Resources.deleteImg;
+            this.DeleteCountryButton.Location = new System.Drawing.Point(83, 267);
+            this.DeleteCountryButton.Name = "DeleteCountryButton";
+            this.DeleteCountryButton.Size = new System.Drawing.Size(44, 23);
+            this.DeleteCountryButton.TabIndex = 4;
+            this.DeleteCountryButton.UseVisualStyleBackColor = true;
+            this.DeleteCountryButton.Click += new System.EventHandler(this.DeleteCountryButton_click);
             // 
             // Form1
             // 

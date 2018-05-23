@@ -83,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringRes.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,7 +122,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\Pictures\PhoneBookIconBig.ico" />
+    <None Include="Resources\Pictures\deleteImg.png" />
+    <None Include="Resources\Pictures\plusImg.png" />
+    <None Include="Resources\Pictures\delete.png" />
     <Content Include="Resources\Pictures\PenIconB.png" />
+    <None Include="Resources\Pictures\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
